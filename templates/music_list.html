@@ -1,0 +1,10 @@
+<html>
+    <head></head>
+    <body>
+        <ul>
+            {% for music in music %}
+                <li>{{ music.id }}. {{ music.name }} --- {{ music.duration }} min (author {{ music.author.name }} ) </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
