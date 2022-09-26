@@ -1,0 +1,24 @@
+<html>
+    <head></head>
+    <body>
+        <form method="POST">
+            <table>
+                    <td>Music</td>
+                    <td>
+                        <select name="music.id">
+                            <option> ---- </option>
+                            {% for music in music %}
+                                <option value="{{ music.id }}">{{ music.name }} by {{music.author.name}}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
